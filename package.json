@@ -1,8 +1,8 @@
 {
-  "name": "budget-alerts",
+  "name": "cdk-budget-alerts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dmytro.kosiachenko/budget-alerts.git"
+    "url": "https://github.com/dmytrokosiachenko/cdk-budget-alerts.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -61,10 +61,6 @@
   "peerDependencies": {
     "aws-cdk-lib": "^2.37.0",
     "constructs": "^10.0.5"
-  },
-  "dependencies": {
-    "aws-cdk-lib/aws-budgets": "*",
-    "aws-cdk-lib/aws-sns": "*"
   },
   "keywords": [
     "cdk"
