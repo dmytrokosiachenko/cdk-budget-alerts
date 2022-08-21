@@ -1,5 +1,6 @@
 import { CfnBudget } from 'aws-cdk-lib/aws-budgets';
 import { Construct } from 'constructs';
+import { BudgetAlertProperties } from './BudgetAlertProperties';
 
 export class BudgetAlertConstruct extends Construct {
 

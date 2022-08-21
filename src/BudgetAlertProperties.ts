@@ -1,9 +1,9 @@
-interface BudgetAlertProperties {
+export interface BudgetAlertProperties {
 
-  emailAddressesForAlerting: string[];
+  readonly emailAddressesForAlerting: string[];
   /** in euro */
-  budgetLimit: number;
+  readonly budgetLimit: number;
   /** percent from budget limit */
-  alarmThreshold: number;
+  readonly alarmThreshold: number;
 
 }

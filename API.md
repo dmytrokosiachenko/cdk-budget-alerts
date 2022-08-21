@@ -1,21 +1,40 @@
 # API Reference <a name="API Reference" id="api-reference"></a>
 
+## Constructs <a name="Constructs" id="Constructs"></a>
 
+### BudgetAlertConstruct <a name="BudgetAlertConstruct" id="cdk-budget-alerts.BudgetAlertConstruct"></a>
 
-## Classes <a name="Classes" id="Classes"></a>
-
-### Hello <a name="Hello" id="budget-alerts.Hello"></a>
-
-#### Initializers <a name="Initializers" id="budget-alerts.Hello.Initializer"></a>
+#### Initializers <a name="Initializers" id="cdk-budget-alerts.BudgetAlertConstruct.Initializer"></a>
 
 ```typescript
-import { Hello } from 'budget-alerts'
+import { BudgetAlertConstruct } from 'cdk-budget-alerts'
 
-new Hello()
+new BudgetAlertConstruct(scope: Construct, id: string, properties: BudgetAlertProperties)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#cdk-budget-alerts.BudgetAlertConstruct.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk-budget-alerts.BudgetAlertConstruct.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk-budget-alerts.BudgetAlertConstruct.Initializer.parameter.properties">properties</a></code> | <code><a href="#cdk-budget-alerts.BudgetAlertProperties">BudgetAlertProperties</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk-budget-alerts.BudgetAlertConstruct.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="cdk-budget-alerts.BudgetAlertConstruct.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `properties`<sup>Required</sup> <a name="properties" id="cdk-budget-alerts.BudgetAlertConstruct.Initializer.parameter.properties"></a>
+
+- *Type:* <a href="#cdk-budget-alerts.BudgetAlertProperties">BudgetAlertProperties</a>
 
 ---
 
@@ -23,17 +42,120 @@ new Hello()
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#budget-alerts.Hello.sayHello">sayHello</a></code> | *No description.* |
+| <code><a href="#cdk-budget-alerts.BudgetAlertConstruct.toString">toString</a></code> | Returns a string representation of this construct. |
 
 ---
 
-##### `sayHello` <a name="sayHello" id="budget-alerts.Hello.sayHello"></a>
+##### `toString` <a name="toString" id="cdk-budget-alerts.BudgetAlertConstruct.toString"></a>
 
 ```typescript
-public sayHello(): string
+public toString(): string
 ```
 
+Returns a string representation of this construct.
 
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk-budget-alerts.BudgetAlertConstruct.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-budget-alerts.BudgetAlertConstruct.isConstruct"></a>
+
+```typescript
+import { BudgetAlertConstruct } from 'cdk-budget-alerts'
+
+BudgetAlertConstruct.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="cdk-budget-alerts.BudgetAlertConstruct.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk-budget-alerts.BudgetAlertConstruct.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="cdk-budget-alerts.BudgetAlertConstruct.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+
+## Structs <a name="Structs" id="Structs"></a>
+
+### BudgetAlertProperties <a name="BudgetAlertProperties" id="cdk-budget-alerts.BudgetAlertProperties"></a>
+
+#### Initializer <a name="Initializer" id="cdk-budget-alerts.BudgetAlertProperties.Initializer"></a>
+
+```typescript
+import { BudgetAlertProperties } from 'cdk-budget-alerts'
+
+const budgetAlertProperties: BudgetAlertProperties = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk-budget-alerts.BudgetAlertProperties.property.alarmThreshold">alarmThreshold</a></code> | <code>number</code> | percent from budget limit. |
+| <code><a href="#cdk-budget-alerts.BudgetAlertProperties.property.budgetLimit">budgetLimit</a></code> | <code>number</code> | in euro. |
+| <code><a href="#cdk-budget-alerts.BudgetAlertProperties.property.emailAddressesForAlerting">emailAddressesForAlerting</a></code> | <code>string[]</code> | *No description.* |
+
+---
+
+##### `alarmThreshold`<sup>Required</sup> <a name="alarmThreshold" id="cdk-budget-alerts.BudgetAlertProperties.property.alarmThreshold"></a>
+
+```typescript
+public readonly alarmThreshold: number;
+```
+
+- *Type:* number
+
+percent from budget limit.
+
+---
+
+##### `budgetLimit`<sup>Required</sup> <a name="budgetLimit" id="cdk-budget-alerts.BudgetAlertProperties.property.budgetLimit"></a>
+
+```typescript
+public readonly budgetLimit: number;
+```
+
+- *Type:* number
+
+in euro.
+
+---
+
+##### `emailAddressesForAlerting`<sup>Required</sup> <a name="emailAddressesForAlerting" id="cdk-budget-alerts.BudgetAlertProperties.property.emailAddressesForAlerting"></a>
+
+```typescript
+public readonly emailAddressesForAlerting: string[];
+```
+
+- *Type:* string[]
+
+---
 
 
 
