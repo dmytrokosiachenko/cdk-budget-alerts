@@ -13,7 +13,7 @@ export class BudgetAlertConstruct extends Construct {
         timeUnit: 'MONTHLY',
         budgetLimit: {
           amount: properties.budgetLimit,
-          unit: 'EUR',
+          unit: 'USD',
         },
       },
 
