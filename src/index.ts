@@ -1,2 +1,2 @@
-export * from '../src/BudgetAlertConstruct';
-export * from '../src/BudgetAlertProperties';
+export * from './BudgetAlertConstruct';
+export * from './BudgetAlertProperties';
