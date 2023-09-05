@@ -1,3 +1,7 @@
+### AWS Construct Library for Budget Alerts
+
+This construct library allows you to create budget alerts for your AWS account.
+
 # API Reference <a name="API Reference" id="api-reference"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -105,6 +109,8 @@ The tree node.
 
 ### BudgetAlertProperties <a name="BudgetAlertProperties" id="cdk-budget-alerts.BudgetAlertProperties"></a>
 
+Properties for BudgetAlerts Time unit is monthly.
+
 #### Initializer <a name="Initializer" id="cdk-budget-alerts.BudgetAlertProperties.Initializer"></a>
 
 ```typescript
@@ -117,8 +123,8 @@ const budgetAlertProperties: BudgetAlertProperties = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-budget-alerts.BudgetAlertProperties.property.alarmThreshold">alarmThreshold</a></code> | <code>number</code> | percent from budget limit. |
-| <code><a href="#cdk-budget-alerts.BudgetAlertProperties.property.budgetLimit">budgetLimit</a></code> | <code>number</code> | in euro. |
+| <code><a href="#cdk-budget-alerts.BudgetAlertProperties.property.alarmThreshold">alarmThreshold</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#cdk-budget-alerts.BudgetAlertProperties.property.budgetLimit">budgetLimit</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#cdk-budget-alerts.BudgetAlertProperties.property.emailAddressesForAlerting">emailAddressesForAlerting</a></code> | <code>string[]</code> | *No description.* |
 
 ---
@@ -131,8 +137,6 @@ public readonly alarmThreshold: number;
 
 - *Type:* number
 
-percent from budget limit.
-
 ---
 
 ##### `budgetLimit`<sup>Required</sup> <a name="budgetLimit" id="cdk-budget-alerts.BudgetAlertProperties.property.budgetLimit"></a>
@@ -142,8 +146,6 @@ public readonly budgetLimit: number;
 ```
 
 - *Type:* number
-
-in euro.
 
 ---
 

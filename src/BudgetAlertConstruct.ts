@@ -7,6 +7,7 @@ export class BudgetAlertConstruct extends Construct {
 
   constructor(scope: Construct, id: string, properties: BudgetAlertProperties) {
     super(scope, id);
+    this.checkInput(properties);
     new CfnBudget(scope, 'BudgetForAlerting', {
       budget: {
         budgetType: 'COST',
@@ -31,6 +32,14 @@ export class BudgetAlertConstruct extends Construct {
     });
   }
 
+  private checkInput(properties: BudgetAlertProperties) {
+    if (properties.budgetLimit < 0) {
+      throw new Error('Budget limit must be greater than 0.');
+    }
+    if (properties.alarmThreshold < 0 || properties.alarmThreshold > 100) {
+      throw new Error('Alarm threshold must be between 0 and 100.');
+    }
+  }
 
   private createSubscribers(subscribersStringArray: string[]) {
     if (subscribersStringArray.length > 11) {
@@ -38,9 +47,18 @@ export class BudgetAlertConstruct extends Construct {
     }
     const subscribers = new Array<CfnBudget.SubscriberProperty>();
     for (const recipient of subscribersStringArray) {
+      this.validateEmail(recipient);
       subscribers.push({ address: recipient, subscriptionType: 'EMAIL' });
     }
     return subscribers;
+  }
+
+  private validateEmail(email: string) {
+    const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const match = email.match(validRegex);
+    if (match === null) {
+      throw new Error(`Invalid email address: ${email}`);
+    }
   }
 }
 
